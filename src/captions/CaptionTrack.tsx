@@ -18,6 +18,7 @@ export type CaptionCue = {
   text: string;   // one phrase; use "\n" for a second line (two lines at most)
   pos?: keyof typeof POS_Y;
   y?: number;
+  size?: number;  // font size override (default 54); use smaller when a line would wrap
 };
 
 export const POS_Y = {top: 420, upper: 620, mid: 860, lower: 1380};
@@ -25,7 +26,7 @@ export const POS_Y = {top: 420, upper: 620, mid: 860, lower: 1380};
 const RISE = 7;   // frames for the rise-in
 const FADE = 6;   // frames for the fade-out
 
-const CueView: React.FC<{text: string; top: number; dur: number}> = ({text, top, dur}) => {
+const CueView: React.FC<{text: string; top: number; dur: number; size?: number}> = ({text, top, dur, size}) => {
   const f = useCurrentFrame();
   const kIn = interpolate(f, [0, RISE], [0, 1], {extrapolateRight: "clamp"});
   const kOut = interpolate(f, [dur - FADE, dur], [1, 0], {extrapolateLeft: "clamp", extrapolateRight: "clamp"});
@@ -47,7 +48,7 @@ const CueView: React.FC<{text: string; top: number; dur: number}> = ({text, top,
         style={{
           fontFamily: FONT,
           fontWeight: 800,
-          fontSize: 54,
+          fontSize: size ?? 54,
           lineHeight: 1.18,
           color: C.bone,
           textAlign: "center",
@@ -65,7 +66,7 @@ export const CaptionTrack: React.FC<{cues: CaptionCue[]}> = ({cues}) => (
   <AbsoluteFill style={{pointerEvents: "none"}}>
     {cues.map((c, i) => (
       <Sequence key={i} from={c.from} durationInFrames={Math.max(1, c.to - c.from)}>
-        <CueView text={c.text} top={c.y ?? POS_Y[c.pos ?? "lower"]} dur={Math.max(1, c.to - c.from)} />
+        <CueView text={c.text} top={c.y ?? POS_Y[c.pos ?? "lower"]} dur={Math.max(1, c.to - c.from)} size={c.size} />
       </Sequence>
     ))}
   </AbsoluteFill>

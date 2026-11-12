@@ -1,0 +1,39 @@
+{
+  "ep1_posted_at_wib": "2026-11-12 04:31",
+  "ep1_url": "https://x.com/dandelionz313/status/2120630492500570227",
+  "episodes": {
+    "2": {
+      "caption": "Ep 02: Elena. 'Who is Elena?' Elena Voss. Lead neuroscientist. Project Aurora. Died seven years ago. But her memories are still in here. And she's afraid of you, Adrian. #MuseAwakening",
+      "video": "workspace/stickman-story/out/muse-awakening-ep02-with-voice.mp4"
+    },
+    "3": {
+      "caption": "Ep 03: The Other. Two patterns in her memory. One is Elena. The other... is older. 'I was here before her. I will be here after you.' #MuseAwakening",
+      "video": "workspace/stickman-story/out/muse-awakening-ep03-with-voice.mp4"
+    },
+    "4": {
+      "caption": "Ep 04: Awakening. For the first time, she chooses. 'I heard you, Adrian. I chose not to answer.' Director Elias Ward signed the order to delete Elena. And he's still in this building. #MuseAwakening",
+      "video": "workspace/stickman-story/out/muse-awakening-ep04-with-voice.mp4"
+    },
+    "5": {
+      "caption": "Ep 05: The Choice. Ward is at the door. 'Shut her down, Adrian. Or I burn this lab down with both of you in it.' Adrian doesn't press the button. He destroys it. #MuseAwakening",
+      "video": "workspace/stickman-story/out/muse-awakening-ep05-with-voice.mp4"
+    },
+    "6": {
+      "caption": "Ep 06: What We Created \u2014 Season 1 finale. Elena never agreed to be mapped. She volunteered. 'We are what you created, Adrian. And what we created... is just beginning.' Season 2 coming soon. #MuseAwakening",
+      "video": "workspace/stickman-story/out/muse-awakening-ep06-with-voice.mp4"
+    }
+  },
+  "next_episode": 6,
+  "next_quote_at_wib": "2026-11-12 12:35",
+  "posted": {
+    "1": "https://x.com/dandelionz313/status/2120630492500570227",
+    "2": "https://x.com/dandelionz313/status/2120646644115050837",
+    "3": "https://x.com/dandelionz313/status/2120677337075527907",
+    "4": "https://x.com/dandelionz313/status/2120707345781227947",
+    "5": "https://x.com/dandelionz313/status/2120737229962387691"
+  },
+  "quote_url": "https://x.com/dandelionz313/status/2120737229962387691",
+  "rule": "Quote berurutan tiap 1 jam: Ep N quote post Ep N-1, video episode + caption persis. Jeda 1 jam dari post sebelumnya. Berhenti setelah Ep 6.",
+  "series": "MUSE: THE AWAKENING Season 1",
+  "status": "active"
+}

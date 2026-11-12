@@ -1,4 +1,8 @@
-import {loadFont as loadInter} from "@remotion/google-fonts/Inter";
+// Inter is vendored locally in public/fonts/ (variable font, one file serves
+// weights 600/700/800). The VM's headless browser cannot reach
+// fonts.gstatic.com directly, so @remotion/google-fonts cannot load it at
+// render time. The @font-face rules live in src/Root.tsx.
+export const FONT = "Inter";
 
 // Starter palette: a dark, minimal look with bone-white figures and a warm accent.
 // Change these values to restyle every character and room at once.
@@ -22,10 +26,8 @@ export const C = {
   woodDark: "#33281F",
   steel: "#5A6068",
   red: "#D2483C",
+  termix: "#39FF6A", // TermiX neon green accent
 };
-
-// Inter (SIL Open Font License) is loaded through @remotion/google-fonts.
-export const FONT = loadInter("normal", {weights: ["600", "700", "800"], subsets: ["latin"]}).fontFamily;
 
 export const W = 1080;
 export const H = 1920;
